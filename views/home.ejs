@@ -1,0 +1,89 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+          .explore-btn {
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              padding: 10px 20px;
+              background-color: #ff5733;
+              color: white;
+              font-size: 18px;
+              border-radius: 5px;
+              text-decoration: none; /* Remove underline */
+          }
+          .explore-btn:hover {
+              background-color: #e64c2c;
+          }
+      </style>
+</head>
+<body>
+          <div class="hero">
+                    <div class="hero-content">
+                        <h1>Welcome to Wanderlust</h1>
+                        <p>Explore the world with us!</p>     <a href="/listings" class="explore-btn">Explore Listings</a>       
+                        <img src="/images/wanderlust.jpeg" alt="Wanderlust" class="hero-img">
+
+                    </div>
+                </div>
+                
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .explore-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ff5733;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        .explore-btn:hover {
+            background-color: #e64c2c;
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            // Simulate user login status (change this logic based on real authentication)
+            let isLoggedIn = false; // Set to 'true' if user is logged in
+
+            if (isLoggedIn) {
+                window.location.href = "/listings";
+            } else {
+                window.location.href = "/login";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <button class="explore-btn" onclick="redirectToPage()">Explore Listings</button>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Wanderlust</h1>
+            <p>Explore the world with us!</p>
+            <img src="/images/wanderlust.jpeg" alt="Wanderlust" class="hero-img">
+        </div>
+    </div>
+
+</body>
+</html>

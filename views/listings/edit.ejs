@@ -1,0 +1,57 @@
+<%= layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h3>Edit your Listing</h3>
+        <form method="POST" action="/listings/<%=listing._id %>?_method=PUT" novalidate class="needs-validation">
+
+            <!-- Title (Only letters and spaces allowed) -->
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label> 
+                <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" 
+                       pattern="^[A-Za-z\s]+$" required>
+                <div class="invalid-feedback">Title should only contain letters and spaces.</div>
+            </div>
+
+            <!-- Description (At least 10 characters) -->
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label> 
+                <textarea name="listing[description]" cols="20" rows="5" class="form-control" 
+                          minlength="10" required><%= listing.description %></textarea>
+                <div class="invalid-feedback">Description must be at least 10 characters long.</div>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Link</label> 
+                <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control" required>
+            </div>
+
+            <div class="row">
+                <!-- Price (Only valid numbers allowed) -->
+                <div class="mb-3 col-md-6">
+                    <label for="price" class="form-label">Price</label> 
+                    <input name="listing[price]" value="<%= listing.price %>" type="number" 
+                           class="form-control" required min="1" step="0.01">
+                    <div class="invalid-feedback">Please enter a valid price (e.g., 10 or 10.50).</div>
+                </div>
+
+                <!-- Country (Only letters and spaces allowed) -->
+                <div class="mb-3 col-md-6">
+                    <label for="country" class="form-label">Country</label> 
+                    <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control"
+                           pattern="^[A-Za-z\s]+$" required>
+                    <div class="invalid-feedback">Country should only contain letters and spaces.</div>
+                </div>
+            </div>
+
+            <!-- Location (Must be text) -->
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label> 
+                <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required>
+            </div>
+            <button class="btn btn-danger edit-btn mt-3" style="margin-bottom: 60px;">Edit</button>
+
+        </form>
+    </div>
+</div>

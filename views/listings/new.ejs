@@ -1,0 +1,60 @@
+<%= layout("/layouts/boilerplate") %>
+
+<div class="row ms-3">
+    <div class="col-8 ml-4 offset-2">
+        <br>
+        <h3>Create a new listing</h3>
+        <form action="/listings" method="POST" novalidate class="needs-validation">
+
+            <!-- Title (Only letters & spaces allowed) -->
+            <div class="mb-3 mt-5">
+                <label for="title" class="form-label">Title</label>
+                <input name="listing[title]" placeholder="Enter title" type="text" class="form-control" 
+                       pattern="^[A-Za-z\s]+$" required/>
+                <div class="invalid-feedback">Title should only contain letters and spaces.</div>
+            </div>
+
+            <!-- Description (At least 10 characters) -->
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" placeholder="Enter description" cols="30" rows="5" 
+                          class="form-control" minlength="10" required></textarea>
+                <div class="invalid-feedback">Description must be at least 10 characters long.</div>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Link</label>
+                <input name="listing[image]" placeholder="Enter image URL/Link" type="text" class="form-control" required>
+            </div>
+
+            <div class="row">
+                <!-- Price (Only numbers allowed) -->
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input name="listing[price]" placeholder="Enter price" type="number" class="form-control"
+                           min="1" step="0.01" required/>
+                    <div class="invalid-feedback">Please enter a valid Price (e.g., 10 or 10.50).</div>
+                </div>
+
+                <!-- Country (Only letters and spaces) -->
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" 
+                           pattern="^[A-Za-z\s]+$" required/>
+                    <div class="invalid-feedback">Please enter a valid Country (only letters and spaces allowed).</div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid Location.</div>
+            </div>
+
+            <button class="btn btn-dark add-btn"style="margin-bottom: 10px;">Add</button>
+            <br> <br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+
+
+body {
+    background-color:white;
+    display: flex;
+  font-family: "Plus Jakarta Sans", sans-serif !important; 
+  flex-direction: column;
+  
+}
+.container
+{
+    flex: 1;
+}
+ /* by above setting footer will go down */
+
+.navbar {
+    height: 5rem;
+    position: fixed;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info {
+    display: flex;
+    flex-wrap: wrap;
+text-align: center;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 8rem;
+    background-color: #ebebeb;
+}
+
+.f-info-links,.f-info-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+  /* Card */
+    .listing-card
+    {
+        border: none !important;
+        margin-bottom: 2rem;
+    }
+    .card-img-top
+    {
+         border-radius: 1rem;
+         width: 100%;
+         object-fit: cover !important;
+    }
+    .card-body{
+     padding: 0 !important;
+    }
+    .card-text p{
+        font-weight: 400 !important;
+    }
+    .listing-link
+    {
+        text-decoration: none;
+    }
+
+
+         /* Card Effect */
+         .card-img-overlay{
+            opacity: 0;
+
+         }
+         .card-img-overlay:hover{
+            opacity: 0.2;
+            background-color: white;
+
+         }
+         /* edit page */
+ .add-btn
+ {
+      background-color: #fe424d !important;
+ }
+     /* show page */
+
+ .show-img
+ {
+    height: 30vh;
+ }
+ .btns{
+    display: flex;
+    offset: 4;
+ }
+ .show-card
+ {
+    padding-left: 0;
+    padding-right: 0;
+ }
+ .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero-img {
+    
+    max-width: 2800px; /* Limit size */
+    height: 600px;
+    border-radius: 10px;
+
+
+  
+}
+
+.mt-3
+{
+     margin-top: 23px;
+}
