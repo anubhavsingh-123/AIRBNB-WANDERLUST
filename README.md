@@ -1,5 +1,19 @@
-“Wanderlust is my personal full-stack travel booking platform inspired by Airbnb. Users can register and log in, explore listings created by others, and create their own property listings with images, price, location, and descriptions. I implemented full CRUD functionality — adding, editing, deleting, and viewing listings — along with a review system where users can leave ratings and comments on other listings.”
+🏡 Wanderlust – Airbnb-Inspired Travel Booking Platform
+✨ Overview
 
-“The platform supports user and host dashboards, secure authentication, and proper access control so that only the listing owner can modify or delete their properties. It features a mobile-responsive UI and dynamic listing management that adapts to different roles.”
+Wanderlust is a full-stack travel booking platform inspired by Airbnb, where users can browse listings, register/login, and create their own property listings. It supports dynamic listings with images, price, location, and detailed descriptions.
 
-“The backend is built with Node.js, Express, and MongoDB, while authentication is handled through Passport.js and JWT. The UI is rendered using EJS and Bootstrap, and the application is deployed using MongoDB Atlas for scalable cloud storage.”
+🎯 Key Features
+
+Users can add, edit, delete, and view listings, and also leave reviews and ratings on properties. The platform includes secure authentication, role-based access control, and separate dashboards for users and hosts. It also offers a clean, mobile-responsive UI for smooth browsing.
+
+🛠️ Tech Stack
+
+Frontend: EJS, Bootstrap
+Backend: Node.js, Express.js
+Database: MongoDB Atlas
+Authentication: Passport.js, JWT
+
+🚀 Project Outcome
+
+The platform delivers a complete Airbnb-style experience with booking-ready listings, secure user management, and a scalable backend.
